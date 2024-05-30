@@ -1,0 +1,172 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; 
+    max-width: 700px;
+    width: 100%;
+    justify-content: center; 
+    align-items: center;
+    margin: auto;
+    height: 100vh; 
+}
+
+.phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-right: 20px; 
+}
+
+.phone-frame {
+    position: relative;
+    width: 100%; 
+    border: transparent;
+}
+
+.phone-screen {
+    position: absolute;
+    top: 15.4%;
+    left: 32%;
+    width: 54.8%;
+    height: 71%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.phone-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    background-size: cover; /* Ajuste a imagem para cobrir o contêiner */
+    background-position: center; 
+    object-fit: cover;
+}
+
+.phone-image.active {
+    opacity: 1;
+}
+
+.phone-container img {
+    width: 450px;
+    height: 650px;
+    transition: transform 0.5s ease;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 350px;
+}
+
+.form-wrapper, .signup-wrapper, .app-links {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+}
+
+.form-wrapper img {
+    height: 110px;
+    margin: 30px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+}
+
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #3897f0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.divider .line {
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.divider .or {
+    padding: 0 10px;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.fb-login {
+    margin: 10px 0;
+    color: #385185;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.forgot-password {
+    font-size: 12px;
+    color: #003569;
+    text-decoration: none;
+}
+
+.signup-wrapper a {
+    color: #3897f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.app-links p {
+    margin: 15px 0 5px;
+}
+
+.app-links img {
+    width: 256px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+/* Estilos para telas menores */
+@media only screen and (max-width: 700px) {
+    .phone-container {
+        display: none; /* Oculta o container do telefone */
+    }
+    .form-container {
+        display: block; /* Mostra apenas o container de login */
+        text-align: center;
+    }
+}
